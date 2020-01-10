@@ -9,8 +9,4 @@ class Customer
 		this.email = email;
 	}
 
-	public static void main()
-	{
-		Customer jackson = new Customer("Jackson", "jackson@gmail.com");
-	}
 }
