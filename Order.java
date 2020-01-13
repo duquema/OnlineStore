@@ -1,36 +1,24 @@
 class Order
 {
-	private int itemNumber;
-	private Item[] itemList = 0;
-	private int totalCost;
+	private Customer customer;
+	private Item[] itemList;
 
-	public Order()
+	public Order(Item[] items, Customer customer)
 	{
-		this.itemNumber = 0;
+		this.itemList = items;
+		this.customer = customer;
 	}
 
-	public void addItem(Item item)
+	public String totalPrice()
 	{
-		this.itemList[numberOfItems] = item;
-		this.numberOfItems += 1;
-  }
+		int totalPrice = 0;
 
-  public int calculateCost()
-		{
-			this.totalCost = 0;
-			int subTotal = 0;
-      for (int i = 0; i < this.itemNumber; i++){
-				this.subTotal += this.itemList[i].getPrice();
-			}
-			this.totalCost = subTotal + (int)(subTotal * 0.08);
-			return this.totalCost;
-		}
-
-  public String summary(){
-		String summary ="";
-  	for( int x =0; x<this.numberOfItems; x++){
-			summary += this.itemList.getName + "\t" + this.itemList.getID + "\t" + this.itemList.getPrice;
+		for (int i = 0; i < this.itemList.length; i++){
+            totalPrice += itemList[i].getPrice();
         }
-    }
+
+        return "Total Price: $" + ((totalPrice * 1.08) / 100.0);
+
+	}
 
 }

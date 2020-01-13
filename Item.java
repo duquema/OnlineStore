@@ -16,7 +16,7 @@ class Item
 		return this.price;
 	}
 
-	public String getID()
+	public int getID()
 	{
 		return this.id;
 	}

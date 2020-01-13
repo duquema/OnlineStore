@@ -10,15 +10,14 @@ class Customer
 		this.email = email;
 	}
 
-	public void addItem(item)
+	public String getName()
 	{
-		order.addItem(item);
+		return this.name;
 	}
 
-	public String viewOrder()
+	public String getEmail()
 	{
-		cost = order.calculateCost();
+		return this.email;
 	}
 
-	}
 }
