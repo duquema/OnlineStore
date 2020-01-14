@@ -17,7 +17,7 @@ class Order
             totalPrice += itemList[i].getPrice();
         }
 
-        return "Total Price: $" + ((totalPrice * 1.08) / 100.0);
+        return "Total Price: $" + (Math.round(totalPrice * 1.08) / 100.0);
 
 	}
 
